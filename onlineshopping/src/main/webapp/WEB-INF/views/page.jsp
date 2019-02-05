@@ -21,13 +21,15 @@
 
 <!-- Bootstrap Core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Core CSS readable theme -->
+<link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
 
 <!-- Custom CSS -->
 <link href="${css}/shop-homepage.css" rel="stylesheet">
- 
+
 <script>
-window.menu='${title}';
-</script> 
+	window.menu = '${title}';
+</script>
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -38,34 +40,38 @@ window.menu='${title}';
 </head>
 
 <body>
+	<div class="wrapper">
+		<!-- Navigation -->
+		<%@ include file="./shared/navbar.jsp"%>
+		<!-- Page Content -->
+		<div class="content">
+			<!--  loading the home content -->
+			<c:if test="${userClickHome == true}">
+				<%@include file="home.jsp"%>
+			</c:if>
+			<c:if test="${userClickAbout == true}">
+				<%@include file="about.jsp"%>
+			</c:if>
+			<c:if test="${userClickContact == true}">
+				<%@include file="contact.jsp"%>
+			</c:if>
 
-	<!-- Navigation -->
-	<%@ include file="./shared/navbar.jsp"%>
-	<!-- Page Content -->
-	<!--  loading the home content -->
-	<c:if test="${userClickHome == true}">
-		<%@include file="home.jsp"%>
-	</c:if>
-	<c:if test="${userClickAbout == true}">
-		<%@include file="about.jsp"%>
-	</c:if>
-	<c:if test="${userClickContact == true}">
-		<%@include file="contact.jsp"%>
-	</c:if>
-	<!-- /.container -->
-	<!-- footer comes here -->
-	<%@include file="./shared/footer.jsp"%>
-	<!-- /.container -->
+		</div>
+		<!-- /.container -->
+		<!-- footer comes here -->
+		<%@include file="./shared/footer.jsp"%>
+		<!-- /.container -->
 
-	<!-- jQuery -->
-	<script src="${js}/jquery.js"></script>
-	
+		<!-- jQuery -->
+		<script src="${js}/jquery.js"></script>
 
-	<!-- Bootstrap Core JavaScript -->
-	<script src="${js}/bootstrap.min.js"></script>
-	<!-- self codded javascript -->
-	<script src="${js}/myapp.js"></script>
-	
+
+		<!-- Bootstrap Core JavaScript -->
+		<script src="${js}/bootstrap.min.js"></script>
+		<!-- self codded javascript -->
+		<script src="${js}/myapp.js"></script>
+
+	</div>
 
 </body>
 

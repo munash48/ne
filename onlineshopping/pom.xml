@@ -10,9 +10,17 @@
 	<properties>
 		<javaee.version>8.0</javaee.version>
 		<spring.version>5.0.8.RELEASE</spring.version>
+		
 	</properties>
 	<dependencies>
 		<!-- JAVA EE API -->
+<!-- linking front to back end -->
+		<dependency>
+
+			<groupId>net.nasser</groupId>
+			<artifactId>shoppingbackend</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/javax/javaee-api -->
 		<dependency>
